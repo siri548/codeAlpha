@@ -31,7 +31,7 @@ class AtmMachine implements ATM {
     public void menu() {
         if (pin == PIN) {
             System.out.println("Select An Option");
-            System.out.println("A: Withdraw");
+            System.out.println("A: Withdraw");1234567
             System.out.println("B: Deposit");
             System.out.println("C: Transfer");
             System.out.println("D: checkBalance");
@@ -66,7 +66,7 @@ class AtmMachine implements ATM {
         int amount = input.nextInt();
         if (balance >= amount) {
             balance -= amount;
-            String msg = String.format("%d debited from %d",amount, userId);
+            String msg = String.format("%d debit from %d",amount, userId);
             System.out.println(msg);
         } else {
             System.out.println("Insufficient Funds");
@@ -87,7 +87,7 @@ class AtmMachine implements ATM {
 
     @Override
     public void transfer() {
-        System.out.println("Amount to be Transfered to the userId: ");
+        System.out.println("Amount to be Transfered to the Account Number: ");
         int userId2 = input.nextInt();
         System.out.println("Enter the amount to transfer: ");
         int amount = input.nextInt();

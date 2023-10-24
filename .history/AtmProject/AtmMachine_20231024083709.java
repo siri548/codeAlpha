@@ -87,7 +87,7 @@ class AtmMachine implements ATM {
 
     @Override
     public void transfer() {
-        System.out.println("Amount to be Transfered to the userId: ");
+        System.out.println("Amount to be Transfered to the Account Number: ");
         int userId2 = input.nextInt();
         System.out.println("Enter the amount to transfer: ");
         int amount = input.nextInt();

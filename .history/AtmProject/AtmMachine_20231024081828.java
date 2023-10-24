@@ -66,7 +66,7 @@ class AtmMachine implements ATM {
         int amount = input.nextInt();
         if (balance >= amount) {
             balance -= amount;
-            String msg = String.format("%d debited from %d",amount, userId);
+            String msg = String.format("%d debit from %d",amount, userId);
             System.out.println(msg);
         } else {
             System.out.println("Insufficient Funds");
@@ -87,13 +87,13 @@ class AtmMachine implements ATM {
 
     @Override
     public void transfer() {
-        System.out.println("Amount to be Transfered to the userId: ");
-        int userId2 = input.nextInt();
+        System.out.println("Amount to be Transfered to the Account Number: ");
+        int userId = input.nextInt();
         System.out.println("Enter the amount to transfer: ");
         int amount = input.nextInt();
         if (balance >= amount) {
             balance = balance - amount;
-            String msg = String.format("%d Transferred from %d to %d successfully", amount,userId ,userId2);
+            String msg = String.format("%d Transferred from %d to %d successfully", amount,userId ,accountNumber2);
             System.out.println(msg);
             System.out.println("Remaining Balance: "+balance);
         } else {
